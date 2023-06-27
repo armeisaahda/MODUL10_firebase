@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <!--ini adalah permission agar kita bisa akses link firebase-->
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -15,13 +14,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MODUL10_firebase"
         tools:targetApi="31">
-
-        <!-- Firebase Realtime Database -->
+        <activity
+            android:name=".Fitur.Insert"
+            android:exported="false" />
+        <activity
+            android:name=".Fitur.Edit"
+            android:exported="false" /> <!-- Firebase Realtime Database -->
         <meta-data
             android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-            android:value="com.google.firebase.components.ComponentRegistrar"/>
-        <!--ini untuk config perizinan di firebasenya-->
-
+            android:value="com.google.firebase.components.ComponentRegistrar" /> <!-- ini untuk config perizinan di firebasenya -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
